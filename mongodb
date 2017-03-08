@@ -1,1 +1,28 @@
 mogod 
+
+mongo
+
+
+Create users
+```
+> use meetingApp
+switched to db meetingApp
+> show collections
+> db.createCollection('users')
+{ "ok" : 1 }
+> show collections
+users
+> db.users.inser({username:'Max',password:'1234'})
+2017-03-08T00:30:01.468-0700 E QUERY    [thread1] TypeError: db.users.inser is not a function :
+@(shell):1:1
+> db.users.insert({username:'Max',password:'1234'})
+WriteResult({ "nInserted" : 1 })
+> db.users.insert({user:'Keyu',password:'1234'})
+WriteResult({ "nInserted" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("58bfb30d02dc88387f77dfe4"), "username" : "Max", "password" : "1234" }
+{ "_id" : ObjectId("58bfb31302dc88387f77dfe5"), "username" : "Keyu", "password" : "1234" }
+
+```      
+       
+
