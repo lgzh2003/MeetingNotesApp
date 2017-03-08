@@ -1,0 +1,10 @@
+/*File & File Folder Prepare*/
+touch app.js
+mkdir controllers public routes views
+cd routes  touch index.js
+/*Init package.json*/
+npm init
+
+/*Install package used*/
+npm install --save express body-parser mongoose path swig async
+
